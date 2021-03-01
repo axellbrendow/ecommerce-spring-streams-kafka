@@ -1,0 +1,4 @@
+rootProject.name = 'checkout'
+include 'build:generated-main-avro-java'
+findProject(':build:generated-main-avro-java')?.name = 'generated-main-avro-java'
+
