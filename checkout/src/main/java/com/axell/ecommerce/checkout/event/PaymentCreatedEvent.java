@@ -10,12 +10,11 @@ import org.apache.avro.specific.SpecificData;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5238205078880438754L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PaymentCreatedEvent\",\"namespace\":\"com.axell.ecommerce.payment.event\",\"fields\":[{\"name\":\"checkoutCode\",\"type\":[{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"checkoutStatus\",\"type\":[{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"paymentCode\",\"type\":[{\"type\":\"string\",\"avro.java.string\":\"String\"}]}]}");
+  private static final long serialVersionUID = 6286694217421371067L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PaymentCreatedEvent\",\"namespace\":\"com.axell.ecommerce.payment.event\",\"fields\":[{\"name\":\"checkoutCode\",\"type\":[{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"paymentCode\",\"type\":[{\"type\":\"string\",\"avro.java.string\":\"String\"}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
-   private Object checkoutCode;
-   private Object checkoutStatus;
-   private Object paymentCode;
+  private java.lang.Object checkoutCode;
+  private java.lang.Object paymentCode;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -27,34 +26,30 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
   /**
    * All-args constructor.
    * @param checkoutCode The new value for checkoutCode
-   * @param checkoutStatus The new value for checkoutStatus
    * @param paymentCode The new value for paymentCode
    */
-  public PaymentCreatedEvent(Object checkoutCode, Object checkoutStatus, Object paymentCode) {
+  public PaymentCreatedEvent(java.lang.Object checkoutCode, java.lang.Object paymentCode) {
     this.checkoutCode = checkoutCode;
-    this.checkoutStatus = checkoutStatus;
     this.paymentCode = paymentCode;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
   // Used by DatumWriter.  Applications should not call.
-  public Object get(int field$) {
+  public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return checkoutCode;
-    case 1: return checkoutStatus;
-    case 2: return paymentCode;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+      case 0: return checkoutCode;
+      case 1: return paymentCode;
+      default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
   // Used by DatumReader.  Applications should not call.
   @SuppressWarnings(value="unchecked")
-  public void put(int field$, Object value$) {
+  public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: checkoutCode = (Object)value$; break;
-    case 1: checkoutStatus = (Object)value$; break;
-    case 2: paymentCode = (Object)value$; break;
-    default: throw new org.apache.avro.AvroRuntimeException("Bad index");
+      case 0: checkoutCode = (java.lang.Object)value$; break;
+      case 1: paymentCode = (java.lang.Object)value$; break;
+      default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
 
@@ -62,7 +57,7 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
    * Gets the value of the 'checkoutCode' field.
    * @return The value of the 'checkoutCode' field.
    */
-  public Object getCheckoutCode() {
+  public java.lang.Object getCheckoutCode() {
     return checkoutCode;
   }
 
@@ -70,31 +65,15 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
    * Sets the value of the 'checkoutCode' field.
    * @param value the value to set.
    */
-  public void setCheckoutCode(Object value) {
+  public void setCheckoutCode(java.lang.Object value) {
     this.checkoutCode = value;
-  }
-
-  /**
-   * Gets the value of the 'checkoutStatus' field.
-   * @return The value of the 'checkoutStatus' field.
-   */
-  public Object getCheckoutStatus() {
-    return checkoutStatus;
-  }
-
-  /**
-   * Sets the value of the 'checkoutStatus' field.
-   * @param value the value to set.
-   */
-  public void setCheckoutStatus(Object value) {
-    this.checkoutStatus = value;
   }
 
   /**
    * Gets the value of the 'paymentCode' field.
    * @return The value of the 'paymentCode' field.
    */
-  public Object getPaymentCode() {
+  public java.lang.Object getPaymentCode() {
     return paymentCode;
   }
 
@@ -102,7 +81,7 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
    * Sets the value of the 'paymentCode' field.
    * @param value the value to set.
    */
-  public void setPaymentCode(Object value) {
+  public void setPaymentCode(java.lang.Object value) {
     this.paymentCode = value;
   }
 
@@ -136,11 +115,10 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
    * RecordBuilder for PaymentCreatedEvent instances.
    */
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<PaymentCreatedEvent>
-    implements org.apache.avro.data.RecordBuilder<PaymentCreatedEvent> {
+          implements org.apache.avro.data.RecordBuilder<PaymentCreatedEvent> {
 
-    private Object checkoutCode;
-    private Object checkoutStatus;
-    private Object paymentCode;
+    private java.lang.Object checkoutCode;
+    private java.lang.Object paymentCode;
 
     /** Creates a new Builder */
     private Builder() {
@@ -157,13 +135,9 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
         this.checkoutCode = data().deepCopy(fields()[0].schema(), other.checkoutCode);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.checkoutStatus)) {
-        this.checkoutStatus = data().deepCopy(fields()[1].schema(), other.checkoutStatus);
+      if (isValidValue(fields()[1], other.paymentCode)) {
+        this.paymentCode = data().deepCopy(fields()[1].schema(), other.paymentCode);
         fieldSetFlags()[1] = true;
-      }
-      if (isValidValue(fields()[2], other.paymentCode)) {
-        this.paymentCode = data().deepCopy(fields()[2].schema(), other.paymentCode);
-        fieldSetFlags()[2] = true;
       }
     }
 
@@ -172,35 +146,31 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
      * @param other The existing instance to copy.
      */
     private Builder(com.axell.ecommerce.payment.event.PaymentCreatedEvent other) {
-            super(SCHEMA$);
+      super(SCHEMA$);
       if (isValidValue(fields()[0], other.checkoutCode)) {
         this.checkoutCode = data().deepCopy(fields()[0].schema(), other.checkoutCode);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.checkoutStatus)) {
-        this.checkoutStatus = data().deepCopy(fields()[1].schema(), other.checkoutStatus);
+      if (isValidValue(fields()[1], other.paymentCode)) {
+        this.paymentCode = data().deepCopy(fields()[1].schema(), other.paymentCode);
         fieldSetFlags()[1] = true;
-      }
-      if (isValidValue(fields()[2], other.paymentCode)) {
-        this.paymentCode = data().deepCopy(fields()[2].schema(), other.paymentCode);
-        fieldSetFlags()[2] = true;
       }
     }
 
     /**
-      * Gets the value of the 'checkoutCode' field.
-      * @return The value.
-      */
-    public Object getCheckoutCode() {
+     * Gets the value of the 'checkoutCode' field.
+     * @return The value.
+     */
+    public java.lang.Object getCheckoutCode() {
       return checkoutCode;
     }
 
     /**
-      * Sets the value of the 'checkoutCode' field.
-      * @param value The value of 'checkoutCode'.
-      * @return This builder.
-      */
-    public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder setCheckoutCode(Object value) {
+     * Sets the value of the 'checkoutCode' field.
+     * @param value The value of 'checkoutCode'.
+     * @return This builder.
+     */
+    public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder setCheckoutCode(java.lang.Object value) {
       validate(fields()[0], value);
       this.checkoutCode = value;
       fieldSetFlags()[0] = true;
@@ -208,18 +178,18 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
     }
 
     /**
-      * Checks whether the 'checkoutCode' field has been set.
-      * @return True if the 'checkoutCode' field has been set, false otherwise.
-      */
+     * Checks whether the 'checkoutCode' field has been set.
+     * @return True if the 'checkoutCode' field has been set, false otherwise.
+     */
     public boolean hasCheckoutCode() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'checkoutCode' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'checkoutCode' field.
+     * @return This builder.
+     */
     public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder clearCheckoutCode() {
       checkoutCode = null;
       fieldSetFlags()[0] = false;
@@ -227,80 +197,41 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
     }
 
     /**
-      * Gets the value of the 'checkoutStatus' field.
-      * @return The value.
-      */
-    public Object getCheckoutStatus() {
-      return checkoutStatus;
+     * Gets the value of the 'paymentCode' field.
+     * @return The value.
+     */
+    public java.lang.Object getPaymentCode() {
+      return paymentCode;
     }
 
     /**
-      * Sets the value of the 'checkoutStatus' field.
-      * @param value The value of 'checkoutStatus'.
-      * @return This builder.
-      */
-    public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder setCheckoutStatus(Object value) {
+     * Sets the value of the 'paymentCode' field.
+     * @param value The value of 'paymentCode'.
+     * @return This builder.
+     */
+    public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder setPaymentCode(java.lang.Object value) {
       validate(fields()[1], value);
-      this.checkoutStatus = value;
+      this.paymentCode = value;
       fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'checkoutStatus' field has been set.
-      * @return True if the 'checkoutStatus' field has been set, false otherwise.
-      */
-    public boolean hasCheckoutStatus() {
+     * Checks whether the 'paymentCode' field has been set.
+     * @return True if the 'paymentCode' field has been set, false otherwise.
+     */
+    public boolean hasPaymentCode() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'checkoutStatus' field.
-      * @return This builder.
-      */
-    public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder clearCheckoutStatus() {
-      checkoutStatus = null;
-      fieldSetFlags()[1] = false;
-      return this;
-    }
-
-    /**
-      * Gets the value of the 'paymentCode' field.
-      * @return The value.
-      */
-    public Object getPaymentCode() {
-      return paymentCode;
-    }
-
-    /**
-      * Sets the value of the 'paymentCode' field.
-      * @param value The value of 'paymentCode'.
-      * @return This builder.
-      */
-    public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder setPaymentCode(Object value) {
-      validate(fields()[2], value);
-      this.paymentCode = value;
-      fieldSetFlags()[2] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'paymentCode' field has been set.
-      * @return True if the 'paymentCode' field has been set, false otherwise.
-      */
-    public boolean hasPaymentCode() {
-      return fieldSetFlags()[2];
-    }
-
-
-    /**
-      * Clears the value of the 'paymentCode' field.
-      * @return This builder.
-      */
+     * Clears the value of the 'paymentCode' field.
+     * @return This builder.
+     */
     public com.axell.ecommerce.payment.event.PaymentCreatedEvent.Builder clearPaymentCode() {
       paymentCode = null;
-      fieldSetFlags()[2] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -308,9 +239,8 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
     public PaymentCreatedEvent build() {
       try {
         PaymentCreatedEvent record = new PaymentCreatedEvent();
-        record.checkoutCode = fieldSetFlags()[0] ? this.checkoutCode : (Object) defaultValue(fields()[0]);
-        record.checkoutStatus = fieldSetFlags()[1] ? this.checkoutStatus : (Object) defaultValue(fields()[1]);
-        record.paymentCode = fieldSetFlags()[2] ? this.paymentCode : (Object) defaultValue(fields()[2]);
+        record.checkoutCode = fieldSetFlags()[0] ? this.checkoutCode : (java.lang.Object) defaultValue(fields()[0]);
+        record.paymentCode = fieldSetFlags()[1] ? this.paymentCode : (java.lang.Object) defaultValue(fields()[1]);
         return record;
       } catch (Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);
@@ -319,18 +249,18 @@ public class PaymentCreatedEvent extends org.apache.avro.specific.SpecificRecord
   }
 
   private static final org.apache.avro.io.DatumWriter
-    WRITER$ = new org.apache.avro.specific.SpecificDatumWriter(SCHEMA$);
+          WRITER$ = new org.apache.avro.specific.SpecificDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
-    throws java.io.IOException {
+          throws java.io.IOException {
     WRITER$.write(this, SpecificData.getEncoder(out));
   }
 
   private static final org.apache.avro.io.DatumReader
-    READER$ = new org.apache.avro.specific.SpecificDatumReader(SCHEMA$);
+          READER$ = new org.apache.avro.specific.SpecificDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
-    throws java.io.IOException {
+          throws java.io.IOException {
     READER$.read(this, SpecificData.getDecoder(in));
   }
 
